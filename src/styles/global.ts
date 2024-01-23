@@ -11,14 +11,34 @@ const GlobalStyles = createGlobalStyle`${css`
     -moz-osx-font-smoothing: grayscale;
   }
 
-  ${() => css`
-    html,
-    body {
-      height: 100%;
-    }
-
+  ${({ theme }) => css`
     html {
       scroll-behavior: smooth;
+
+      @media screen and (max-width: 1080px) {
+        font-size: 93.75%; //15px
+      }
+
+      @media screen and (max-width: 720px) {
+        font-size: 87.5%; //14px
+      }
+    }
+
+    body {
+      background: ${theme.colors.mainBg};
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body,
+    input,
+    textarea,
+    button {
+      font-family: ${theme.font.family};
+      font-weight: ${theme.font.normal};
+    }
+
+    button {
+      cursor: pointer;
     }
   `}
 `}`
