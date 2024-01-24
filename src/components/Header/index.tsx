@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import * as S from './styles'
+import Button from '@/UI/Button'
 
 const Header = () => {
   return (
@@ -13,8 +14,10 @@ const Header = () => {
             height={100}
           />
 
-          <span>vila boca gelada</span>
+          <span>Vila boca gelada</span>
         </div>
+
+        <Button title="Nova transação" />
       </section>
     </S.WrapperHeader>
   )
