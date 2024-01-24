@@ -7,5 +7,6 @@ export const WrapperSummary = styled.section`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: ${theme.spacings.medium};
+    margin-top: -6.8rem;
   `}
 `
