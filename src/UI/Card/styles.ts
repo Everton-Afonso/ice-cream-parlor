@@ -16,6 +16,7 @@ const wrapperCardModifiers = {
   `,
 
   Total: (theme: DefaultTheme) => css`
+    color: ${theme.colors.white};
     background-color: ${theme.colors.green};
   `
 }
@@ -40,6 +41,8 @@ export const WrapperCard = styled.div<WrapperCardProps>`
     }
 
     strong {
+      display: block;
+      padding-top: ${theme.spacings.xsmall};
       font-size: 2rem;
       font-style: normal;
       font-weight: ${theme.font.semiBold};
