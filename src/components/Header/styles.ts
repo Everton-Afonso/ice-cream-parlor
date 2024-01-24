@@ -8,9 +8,9 @@ export const WrapperHeader = styled.header`
     background-color: ${theme.colors.primary};
 
     section {
-      max-width: 1120px;
+      max-width: ${theme.grid.container};
       margin: 0 auto;
-      padding: 0 ${theme.spacings.xsmall} 10rem;
+      padding: 0 ${theme.spacings.xsmall} 7rem;
 
       display: flex;
       align-items: center;
