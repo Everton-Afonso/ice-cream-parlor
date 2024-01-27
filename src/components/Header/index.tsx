@@ -1,8 +1,15 @@
+'use client'
+
 import Image from 'next/image'
-import * as S from './styles'
+
 import Button from '@/UI/Button'
+import { useModal } from '../../providers/providerModal'
+
+import * as S from './styles'
 
 const Header = () => {
+  const { toggleNewtransactionModalOpen } = useModal()
+
   return (
     <S.WrapperHeader>
       <section>
@@ -17,7 +24,11 @@ const Header = () => {
           <span>Vila boca gelada</span>
         </div>
 
-        <Button title="Nova transação" />
+        <Button
+          typeImg="Undefined"
+          title="Nova transação"
+          onClick={toggleNewtransactionModalOpen}
+        />
       </section>
     </S.WrapperHeader>
   )

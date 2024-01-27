@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google'
 
 import StyledComponentsRegistry from '@/lib/registry'
 import { Providers } from './providers'
+import { ModalProvider } from '@/providers/providerModal'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -20,12 +21,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const isDev = process.env.NODE_ENV === 'development'
+
   return (
     <html lang="en">
-      <body className={poppins.className}>
-        <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
-        </StyledComponentsRegistry>
+      <body className={poppins.className} suppressHydrationWarning={isDev}>
+        <ModalProvider>
+          <StyledComponentsRegistry>
+            <Providers>{children}</Providers>
+          </StyledComponentsRegistry>
+        </ModalProvider>
       </body>
     </html>
   )
