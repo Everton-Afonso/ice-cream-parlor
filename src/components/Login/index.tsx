@@ -32,7 +32,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <Button title="Login" color="green" type="submit" />
+        <Button title="Login" color="green" type="submit" typeImg="Undefined" />
       </form>
     </S.WrapperLogin>
   )
