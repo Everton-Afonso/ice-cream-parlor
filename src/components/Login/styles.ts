@@ -36,14 +36,8 @@ export const WrapperLogin = styled.section`
         position: relative;
 
         input {
-          width: 100%;
           background-color: ${theme.colors.lightGray};
           border: 1px solid ${theme.colors.gray};
-          padding: ${theme.spacings.xsmall};
-          font-size: ${theme.font.sizes.medium};
-          line-height: 1.25rem;
-          border-radius: ${theme.border.radius};
-          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         }
       }
 
@@ -56,7 +50,6 @@ export const WrapperLogin = styled.section`
       ${StylesButton.WrapperButton} {
         height: 52px;
         line-height: 1.25rem;
-        text-transform: uppercase;
       }
     }
   `}
