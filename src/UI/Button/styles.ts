@@ -29,6 +29,11 @@ const wrapperModifiersButton = {
 
 export const WrapperButton = styled.button<WrapperButtonProps>`
   ${({ theme, $color }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: ${theme.spacings.xsmall};
+
     ${!!$color && wrapperModifiersButton.color(theme, $color)}
   `}
 `
