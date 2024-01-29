@@ -31,9 +31,11 @@ export const WrapperSlider = styled.section`
       margin: 0;
       padding: 0;
     }
+
     .slick-list:focus {
       outline: none;
     }
+
     .slick-list.dragging {
       cursor: pointer;
       cursor: hand;
@@ -55,6 +57,7 @@ export const WrapperSlider = styled.section`
 
       display: block;
     }
+
     .slick-track:before,
     .slick-track:after {
       display: table;
@@ -64,6 +67,7 @@ export const WrapperSlider = styled.section`
     .slick-track:after {
       clear: both;
     }
+
     .slick-loading .slick-track {
       visibility: hidden;
     }
@@ -75,21 +79,31 @@ export const WrapperSlider = styled.section`
       height: 100%;
       min-height: 1px;
     }
+
     [dir='rtl'] .slick-slide {
       float: right;
     }
+
     .slick-slide img {
       display: block;
     }
+
     .slick-slide.slick-loading img {
       display: none;
     }
+
     .slick-slide.dragging img {
       pointer-events: none;
     }
+
     .slick-initialized .slick-slide {
       display: block;
     }
+
+    .slick-initialized .slick-slide:not(:last-child) {
+      margin-right: ${theme.spacings.xsmall};
+    }
+
     .slick-loading .slick-slide {
       visibility: hidden;
     }
@@ -100,6 +114,7 @@ export const WrapperSlider = styled.section`
 
       border: 1px solid transparent;
     }
+
     .slick-arrow.slick-hidden {
       display: none;
     }
@@ -110,19 +125,8 @@ export const WrapperSlider = styled.section`
     }
 
     .slick-slide > div {
-      margin: 0 ${theme.spacings.xxsmall};
       flex: 1 0 auto;
       height: 100%;
-    }
-
-    @media screen and (min-width: 1170px) {
-      .slick-slide > div {
-        margin: 0 ${theme.spacings.xxsmall};
-      }
-
-      .slick-list {
-        margin: 0 -${theme.spacings.xxsmall};
-      }
     }
 
     @media screen and (max-width: 768px) {
