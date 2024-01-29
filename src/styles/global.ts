@@ -88,6 +88,18 @@ const GlobalStyles = createGlobalStyle`${css`
         filter: brightness(0.8);
       }
     }
+
+    @media screen and (max-width: 768px) {
+      .react-modal-content {
+        margin: 0 ${theme.spacings.xsmall};
+        padding: ${theme.spacings.large} ${theme.spacings.xsmall};
+      }
+
+      .react-modal-close {
+        right: ${theme.spacings.xxsmall};
+        top: ${theme.spacings.xxsmall};
+      }
+    }
   `}
 `}`
 

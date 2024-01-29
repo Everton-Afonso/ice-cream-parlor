@@ -1,12 +1,12 @@
-import Table from '@/UI/Table'
 import Summary from '../Summary'
 import * as S from './styles'
+import MobileCardsTable from '@/UI/MobileCardsTable'
 
 const Dashboard = () => {
   return (
     <S.WrapperDashboard>
       <Summary />
-      <Table />
+      <MobileCardsTable />
     </S.WrapperDashboard>
   )
 }
