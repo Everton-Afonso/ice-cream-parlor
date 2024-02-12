@@ -12,12 +12,12 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <StyledComponentsRegistry>
-        <ModalProvider>
-          <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          <ModalProvider>
             <GlobalStyles />
             {children}
-          </ThemeProvider>
-        </ModalProvider>
+          </ModalProvider>
+        </ThemeProvider>
       </StyledComponentsRegistry>
     </>
   )
