@@ -4,8 +4,9 @@ import { FormEvent, useState } from 'react'
 import Image from 'next/image'
 import Modal from 'react-modal'
 
-import { useModal } from '../../providers/providerModal'
 import Button from '@/UI/Button'
+
+import { useModal } from '@/context/providerModal'
 
 import * as S from './styles'
 
