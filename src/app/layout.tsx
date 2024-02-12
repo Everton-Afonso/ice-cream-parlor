@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 
-import StyledComponentsRegistry from '@/lib/registry'
-import { Providers } from './providers'
-import { ModalProvider } from '@/providers/providerModal'
+import { Providers } from '@/providers/provider'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -26,11 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className} suppressHydrationWarning={isDev}>
-        <ModalProvider>
-          <StyledComponentsRegistry>
-            <Providers>{children}</Providers>
-          </StyledComponentsRegistry>
-        </ModalProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

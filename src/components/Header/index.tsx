@@ -3,7 +3,7 @@
 import Image from 'next/image'
 
 import Button from '@/UI/Button'
-import { useModal } from '../../providers/providerModal'
+import { useModal } from '../../context/providerModal'
 
 import * as S from './styles'
 
